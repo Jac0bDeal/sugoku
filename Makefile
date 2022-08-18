@@ -1,4 +1,4 @@
-all: clean lint test goNES
+all: clean lint test sugoku
 
 clean:
 	@echo "Cleaning bin/..."
@@ -10,7 +10,7 @@ dependencies:
 
 sugoku:
 	@echo "Building sugoku binary for use on local system..."
-	@go build -o bin/sugoku ./cmd/sugoku
+	@./scripts/build-sugoku.sh
 
 lint:
 	@echo "Running linters..."
